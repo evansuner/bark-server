@@ -1,0 +1,11 @@
+version: '3'
+services:
+  bark-server:
+    image: adams549659584/bark-server
+    container_name: bark-server
+    restart: always
+    volumes:
+      - ./data:/data
+      - ./web:/web
+    ports:
+      - "8080:8080"
